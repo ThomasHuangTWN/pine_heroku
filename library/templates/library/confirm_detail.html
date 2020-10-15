@@ -1,0 +1,29 @@
+{% extends "library/base.html" %}
+{% load static %}
+
+{% block page_title %}
+Schedule
+{% endblock %}
+
+{% block content %}
+<div class="row mb-3 pl-3">
+	<div class="mr-3">
+		<h5>Book</h5>
+		<p>{{ borrowing.book }}</p>
+		<img src="{{ borrowing.book.image.url }}" class="rounded mx-auto d-block" height=180 width=120>
+	</div>
+	<div>
+		<h5>Borrower</h5>
+		<p>{{ borrowing.borrower }}</p>
+	</div>
+</div>
+
+<form action="{% url 'library:confirm_detail' id %}" method="post">
+	{% csrf_token %}
+	<div class="form-group row">
+	  	<label for="datetime" class="col-form-label ml-3">Scheduled checkout time</label>
+	  	<input class="form-control col-6 ml-3" type="datetime-local" value="{{ now }}" id="datetime" name="datetime">
+	</div>
+	<input type="submit" class="btn btn-primary mb-3" value="Schedule">
+</form>
+{% endblock %}
