@@ -9,4 +9,4 @@ Also, by simplifying the borrowing process, libraries attract more borrowers and
 
 ### Successful Applications
 The first organization to embrace the Pine system is the Computer Software Designing Club of HsinChu Senior High School in Taiwan.
-Visit the official CSDC [library]('https://pine-lib.herokuapp.com') to further understand the functionality of Pine.
+Visit the official CSDC library https://pine-lib.herokuapp.com to further understand the functionality of Pine.
